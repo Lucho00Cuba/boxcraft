@@ -1,6 +1,18 @@
 ## BoxCraft
+<p align="left">
+    <a href="#">
+        <img src="https://img.shields.io/github/actions/workflow/status/Lucho00Cuba/boxcraft/tests.yaml" alt="unittest"/>
+    </a>
+    <a href="#">
+        <img src="https://img.shields.io/github/license/Lucho00Cuba/boxcraft" alt="license"/>
+    </a>
+    <a href="#">
+        <img src="https://img.shields.io/github/last-commit/Lucho00Cuba/boxcraft" alt="last-commit"/>
+    </a>
+</p>
+<hr>
 
-Este es un proyecto que implementa una clase `BoxCraft` para disponer de un sistema para el procesamiento distribuido, basado sobre un sistema de administración de nodos y tareas que aprovecha la flexibilidad de Python y la velocidad de Redis.
+Este es un proyecto que implementa el modulo `BoxCraft` para disponer de un sistema para el procesamiento distribuido, basado en la administración de nodos y tareas que aprovecha la flexibilidad de Python y la velocidad de Redis.
 
 ## Características
 - Sistema de nodos que permite roles de líder y lector para una gestión eficiente.
