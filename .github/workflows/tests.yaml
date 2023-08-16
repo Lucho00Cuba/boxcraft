@@ -10,6 +10,10 @@ jobs:
     services:
       redis:
         image: redis:6.2-alpine
+        env:
+          REDIS_PASSWORD: ${{ env.REDIS_SECRET }}
+          REDIS_SAVE: "20 1"
+          REDIS_LOGLEVEL: "warning"
         ports:
           - 6379:6379
         options: >-
@@ -17,9 +21,6 @@ jobs:
           --health-interval 10s
           --health-timeout 5s
           --health-retries 5
-          --save 20 1
-          --loglevel warning
-          --requirepass ${REDIS_SECRET}
     steps:
     - name: Check out code
       uses: actions/checkout@v2
