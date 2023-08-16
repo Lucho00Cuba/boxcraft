@@ -9,10 +9,24 @@
     <a href="#">
         <img src="https://img.shields.io/github/last-commit/Lucho00Cuba/boxcraft" alt="last-commit"/>
     </a>
+    <a href="#">
+        <img src="https://img.shields.io/pypi/status/boxcraft" alt="status"/>
+    </a>
+    <a href="#">
+        <img src="https://img.shields.io/pypi/format/boxcraft" alt="format"/>
+    </a>
+    <a href="#">
+        <img src="https://img.shields.io/pypi/pyversions/boxcraft" alt="pyversions"/>
+    </a>
+    <a href="#">
+        <img src="https://img.shields.io/pypi/v/boxcraft" alt="version"/>
+    </a>
 </p>
 <hr>
 
-Este es un proyecto que implementa el modulo `BoxCraft` para disponer de un sistema para el procesamiento distribuido, basado en la administración de nodos y tareas que aprovecha la flexibilidad de Python y la velocidad de Redis.
+
+
+Este proyecto implementa el módulo `BoxCraft` para establecer un sistema de procesamiento distribuido. Está basado en la gestión de nodos y tareas, aprovechando tanto la versatilidad de Python como la velocidad de Redis.
 
 ## Características
 - Sistema de nodos que permite roles de líder y lector para una gestión eficiente.
@@ -26,11 +40,15 @@ Este es un proyecto que implementa el modulo `BoxCraft` para disponer de un sist
 
 ## Instalación
 
-1. Clona el repositorio:
+A. Clona el repositorio:
 
 ```bash
 user@node: git clone https://github.com/Lucho00Cuba/boxcraft.git
-user@node: cd boxcraft
+```
+
+B. Instalar con PIP
+```bash
+user@node: pip install boxcraft
 ```
 
 ## Uso

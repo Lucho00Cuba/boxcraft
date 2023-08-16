@@ -8,7 +8,7 @@ with open('requirements.txt', 'r', encoding='utf-8') as f:
 
 setup(
     name='boxcraft',
-    version='0.0.1',
+    version='0.0.2',
     author='JustMe',
     author_email='lomv0209@gmail.com',
     description='Libreria para el Procesamiento Distribuido',
