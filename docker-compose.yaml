@@ -1,0 +1,43 @@
+version: '3.8'
+services:
+  cache:
+    image: redis:6.2-alpine
+    restart: always
+    env_file:
+      - .env
+    ports:
+      - '6379:6379'
+    command: redis-server --save 20 1 --loglevel warning --requirepass ${REDIS_SECRET}
+    volumes: 
+      - ./data:/data
+  redisinsight:
+    image: redislabs/redisinsight:latest
+    ports:
+      - '8001:8001'
+  leader-00:
+    image: boxes:v1
+    container_name: leader-00
+    hostname: leader-00
+    command: ["sh", "-c", "while true; do sleep 1; done"]
+    volumes: 
+      - ./boxcraft:/opt/boxcraft
+    env_file:
+      - .env
+  reader-00:
+    image: boxes:v1
+    container_name: reader-00
+    hostname: reader-00
+    command: ["sh", "-c", "while true; do sleep 1; done"]
+    volumes: 
+      - ./boxcraft:/opt/boxcraft
+    env_file:
+      - .env
+  reader-01:
+    image: boxes:v1
+    container_name: reader-01
+    hostname: reader-01
+    command: ["sh", "-c", "while true; do sleep 1; done"]
+    volumes: 
+      - ./boxcraft:/opt/boxcraft
+    env_file:
+      - .env
